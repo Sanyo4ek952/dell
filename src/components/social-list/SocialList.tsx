@@ -6,11 +6,11 @@ const SocialList = (props: { socialLink: Array<string> }) => {
     return (
         <StyledSocialList>
             <ul>
-                {props.socialLink.map((item, index) => {
+                {props.socialLink.map((item, key) => {
                     return (
                         <StyledSocialItem>
                             <StyledSocialLink href={""}>
-                                <Icon key={index} iconId={item}/>
+                                <Icon key={key} iconId={item}/>
                             </StyledSocialLink>
                         </StyledSocialItem>
                 )

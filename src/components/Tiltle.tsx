@@ -24,7 +24,7 @@ const StyledTitle = styled.div<StyledTitleTypeProps>`
     flex-direction: column;
     text-align: center;
     gap: 50px;
-    line-height: 26px;
+    line-height: 1.1;
     align-items: center;
     margin-bottom: ${props => props.marginBottom};
 

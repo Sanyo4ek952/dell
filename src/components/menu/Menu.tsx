@@ -9,9 +9,9 @@ type MenuPropsType = {
 export const Menu = (props: MenuPropsType) => {
     return (
         <StyledMenu>
-            {props.items.map((item, index) => {
+            {props.items.map((item, key) => {
                     return (
-                        <li key={index}>
+                        <li key={key}>
                             <a href="">
                                 {item}
                             </a>

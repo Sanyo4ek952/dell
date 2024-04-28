@@ -43,7 +43,7 @@ const StyledProjectCart = styled.a`
     }
     
     img{
-    min-height: 260px;    
+    min-height: 260px;
     }
     
     &:hover{
@@ -51,6 +51,13 @@ const StyledProjectCart = styled.a`
         transition: all 0.3s ease-in-out;
         & h4{
             text-decoration: underline;
+        }
+    }
+    @media (max-width: 440px) {
+        flex: 0 1  280px;
+        img{
+            width: 280px;
+            min-height: 100px;
         }
     }
 `
