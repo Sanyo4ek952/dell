@@ -38,7 +38,7 @@ const StyledAboutMe = styled.section<StyledAboutMeProps>`
     @media (max-width: 620px)  {
         flex-direction: column-reverse;
         align-items: center;
-        margin-top: 160px;
+        margin-top: 140px;
         margin-bottom: 40px;
 
     }

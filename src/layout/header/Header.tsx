@@ -46,4 +46,9 @@ const HeaderMenu=styled.div`
     gap: 15px;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 440px) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 `
