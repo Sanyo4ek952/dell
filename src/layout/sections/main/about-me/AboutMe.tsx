@@ -12,8 +12,8 @@ type AboutMeProps = {
 
 const AboutMe = (props: AboutMeProps) => {
     return (
-        <StyledAboutMe marginTop={props.marginTop}>
-            <StyleContainer paddingTop={"140"}>
+        <StyledAboutMe>
+            <StyleContainer paddingTop={"190"}>
                 <FlexWrapper justify={"space-between"}>
                     <Text/>
                     <MyPhoto width={350}
@@ -33,16 +33,13 @@ type StyledAboutMeProps = {
 }
 
 const StyledAboutMe = styled.section<StyledAboutMeProps>`
-    margin-top: ${props => props.marginTop || 20}px;
-    margin-bottom: ${props => props.marginBottom || 0}px;
 
 ${FlexWrapper} {
     gap: 30px;
     @media (max-width: 620px) {
         flex-direction: column-reverse;
         align-items: center;
-        margin-top: 140px;
-        margin-bottom: 40px;
+
     }
 }
 
