@@ -13,7 +13,7 @@ type AboutMeProps = {
 const AboutMe = (props: AboutMeProps) => {
     return (
         <StyledAboutMe marginTop={props.marginTop}>
-            <StyleContainer paddingTop={"100"}>
+            <StyleContainer paddingTop={"140"}>
                 <FlexWrapper justify={"space-between"}>
                     <Text/>
                     <MyPhoto width={350}
