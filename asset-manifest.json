@@ -1,22 +1,26 @@
 {
   "files": {
     "main.css": "/dell/static/css/main.e090315e.css",
-    "main.js": "/dell/static/js/main.8c7f4909.js",
+    "main.js": "/dell/static/js/main.8297028f.js",
     "static/js/787.25eaef86.chunk.js": "/dell/static/js/787.25eaef86.chunk.js",
     "static/media/foto.png": "/dell/static/media/foto.109c3e34f09d761b779b.png",
     "static/media/foto.webp": "/dell/static/media/foto.8935e6f2e093202387aa.webp",
+    "static/media/Screenshot_3.png": "/dell/static/media/Screenshot_3.cab875f0b446dd0c6b5c.png",
+    "static/media/Screenshot_3.webp": "/dell/static/media/Screenshot_3.aa0395ca0b9545c86a4c.webp",
     "static/media/icons-sprite.svg": "/dell/static/media/icons-sprite.59bf41d40c0cd2b541e358011d444dce.svg",
     "static/media/prohect3.png": "/dell/static/media/prohect3.eb9cfd4dbaa95277a320.png",
     "static/media/prohect4.png": "/dell/static/media/prohect4.c6e5e0e5f7a54c6068f8.png",
-    "static/media/prohect2.png": "/dell/static/media/prohect2.492189275a516a9155cd.png",
+    "static/media/prohect3.webp": "/dell/static/media/prohect3.42d14f5d6ca297adcd68.webp",
+    "static/media/prohect4.webp": "/dell/static/media/prohect4.37c781112076583a6207.webp",
     "static/media/prohect1.png": "/dell/static/media/prohect1.44b834481fa4597c8e09.png",
+    "static/media/prohect1.webp": "/dell/static/media/prohect1.ed5b4b31ba7259bc68a3.webp",
     "index.html": "/dell/index.html",
     "main.e090315e.css.map": "/dell/static/css/main.e090315e.css.map",
-    "main.8c7f4909.js.map": "/dell/static/js/main.8c7f4909.js.map",
+    "main.8297028f.js.map": "/dell/static/js/main.8297028f.js.map",
     "787.25eaef86.chunk.js.map": "/dell/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e090315e.css",
-    "static/js/main.8c7f4909.js"
+    "static/js/main.8297028f.js"
   ]
 }
