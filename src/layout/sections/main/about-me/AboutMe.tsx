@@ -5,16 +5,14 @@ import styled from "styled-components";
 import {StyleContainer} from "../../../../styles/StyleContainer";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 
-type AboutMeProps = {
-    marginTop?: string
-    marginBottom?: string
-}
 
-const AboutMe = (props: AboutMeProps) => {
+
+const AboutMe = () => {
     return (
         <StyledAboutMe>
             <StyleContainer paddingTop={"190"}>
-                <FlexWrapper justify={"space-between"}>
+                <FlexWrapper justify={"space-between"}
+                align={"center"}>
                     <Text/>
                     <MyPhoto width={350}
                              height={350}/>
@@ -35,6 +33,7 @@ type StyledAboutMeProps = {
 const StyledAboutMe = styled.section<StyledAboutMeProps>`
 
 ${FlexWrapper} {
+    
     gap: 30px;
     @media (max-width: 620px) {
         flex-direction: column-reverse;
