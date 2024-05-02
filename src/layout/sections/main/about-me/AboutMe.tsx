@@ -24,23 +24,19 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-type StyledAboutMeProps = {
-    marginTop?: string
-    marginBottom?: string
 
-}
 
-const StyledAboutMe = styled.section<StyledAboutMeProps>`
+const StyledAboutMe = styled.section`
 
-${FlexWrapper} {
+    ${FlexWrapper} {
     
-    gap: 30px;
-    @media (max-width: 620px) {
-        flex-direction: column-reverse;
-        align-items: center;
+        gap: 30px;
+        @media (max-width: 620px) {
+            flex-direction: column-reverse;
+            align-items: center;
 
+        }
     }
-}
 
 
 `
