@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
-import {StyleContainer} from "../../styles/StyleContainer";
+import {Container} from "../../styles/Container";
 import {FooterTop} from "./footer-top/FooterTop";
 import {FooterBottom} from "./footer-bottom/FooterBottom";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <StyleContainer paddingBottom={"0"}>
+            <Container>
                 <FooterTop/>
                 <FooterBottom/>
-            </StyleContainer>
+            </Container>
         </StyledFooter>
     );
 };

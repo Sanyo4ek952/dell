@@ -78,7 +78,7 @@ function getClientEnvironment(publicUrl) {
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
         // We support configuring the sockjs pathname during development.
-        // These settings let a developer run multiple simultaneous projects.
+        // These settings let a developer run multiple simultaneous project.
         // They are used as the connection `hostname`, `pathname` and `port`
         // in webpackHotDevClient. They are used as the `sockHost`, `sockPath`
         // and `sockPort` options in webpack-dev-server.

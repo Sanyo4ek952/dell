@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../../../components/menu/Menu";
-import {itemsMenu} from "../../../App";
+import {menuItems} from "../../../App";
 import {GradientLink} from "../../../styles/GradientLink";
 
 export const FooterBottom = () => {
     return (
         <StyledFooterBottom>
-            <Menu items={itemsMenu}/>
+            <Menu items={menuItems}/>
             <StyledCopyright>
                 Designed and built by <GradientLink href="">Alexander</GradientLink> with <GradientLink href="">Love</GradientLink> & <GradientLink href="">Coffee</GradientLink>
             </StyledCopyright>

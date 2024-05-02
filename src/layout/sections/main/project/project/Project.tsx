@@ -8,21 +8,29 @@ type ProjectCartPropsType = {
     techStack?: string
     fontWeight?: string
     image: string
-
+    srcProject:string
+    imageWebp:string
 }
 
-export const ProjectCart = (props: ProjectCartPropsType) => {
+export const Project = (props: ProjectCartPropsType) => {
     return (
-        <StyledProjectCart href="">
+        <StyledProjectCart target="_blank" href={props.srcProject}>
             <article>
-                <img src={props.image} alt="Картинка"/>
+                <ContainerImage>
+                    <img src={props.image} alt="Картинка"/>
+                    <picture>
+                        <source srcSet={props.imageWebp} type="image/webp"/>
+                        <source srcSet={props.image} type="image/jpeg"/>
+                        <img src={props.image} alt="Мое Фото"/>
+                    </picture>
+                </ContainerImage>
                 <Body>
                     <StyledProjectTitle>
                         {props.title}
                     </StyledProjectTitle>
                     <StyledProjectText>
                         <p>{props.text}</p>
-                        <span><b>{props.subtext}</b> <span>{props.techStack}</span></span>
+                        <span><strong>{props.subtext}</strong> <span>{props.techStack}</span></span>
                     </StyledProjectText>
                 </Body>
             </article>
@@ -31,20 +39,21 @@ export const ProjectCart = (props: ProjectCartPropsType) => {
 };
 
 const StyledProjectCart = styled.a`
-    flex: 0 1 375px;
+    flex: 1 1 375px;
+
     display: flex;
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: rgb(54, 54, 54);
     transition: all 0.3s ease-in;
-    article{
+
+    article {
         display: flex;
         flex-direction: column;
     }
-    img {
-        min-height: 260px;
-    }
-    b{
+    
+
+    strong {
         display: inline;
     }
 
@@ -52,15 +61,12 @@ const StyledProjectCart = styled.a`
         transform: scale(1.1);
         transition: all 0.3s ease-in-out;
 
-        & h4 {
-            text-decoration: underline;
-        }
     }
 
     @media (max-width: 440px) {
-        flex: 0 1 280px;
+        flex: 1 1 280px;
         img {
-            width: 280px;
+            width: 100%;
             min-height: 100px;
         }
     }
@@ -71,8 +77,23 @@ const Body = styled.div`
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    &> *:not(:last-child) {
+
+    & > *:not(:last-child) {
         margin-bottom: 10px;
+    }
+`
+const ContainerImage = styled.div`
+    position: relative;
+    padding-top: 69%;
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 `
 
@@ -89,6 +110,7 @@ const StyledProjectText = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+
     p {
         margin-bottom: 10px;
         flex: 1 0 auto;

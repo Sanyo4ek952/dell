@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from "styled-components";
-import {StyleContainer} from "../../../../styles/StyleContainer";
+import {Container} from "../../../../styles/Container";
 import {GradientLink} from "../../../../styles/GradientLink";
 
-export const Email = () => {
+export const Contacts = () => {
     return (
         <StyledEmail>
-            <StyleContainer paddingBottom={"0" } paddingTop={"0"}>
+            <Container>
                 <p>For any questions please mail me:</p>
                 <GradientLink href="mailto:anyo4ek952@gmail.com">Sanyo4ek952@gmail.com</GradientLink>
-            </StyleContainer>
+            </Container>
         </StyledEmail>
     );
 };
 
 
 const StyledEmail = styled.div`
+    padding: 100px 0;
     font-weight: 700;
     font-size: 58px;
     line-height: 70px;
@@ -25,7 +26,7 @@ const StyledEmail = styled.div`
         color: rgb(204, 204, 204);
     }
     
-    ${StyleContainer} {
+    ${Container} {
         text-align: center;
     }
 

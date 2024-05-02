@@ -2,8 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
-import {StyleContainer} from "../../styles/StyleContainer";
-import {itemsMenu, socialLink} from "../../App";
+import {Container} from "../../styles/Container";
+import {menuItems, socialLinks} from "../../App";
 import SocialList from "../../components/social-list/SocialList";
 import {FlexWrapper} from "../../components/FlexWrapper";
 
@@ -11,18 +11,18 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 export const Header = () => {
     return (
         <StyledHeader>
-            <StyleContainer paddingTop={"0"} paddingBottom={"0"}>
+            <Container>
                 <FlexWrapper justify={'space-between'}>
                     <Logo viewBox={"0 0 97  59"}
                           iconId={'logoGrey'}
                           width={'97'}
                           height={"59"}/>
                     <HeaderMenu>
-                        <Menu items={itemsMenu}/>
-                        <SocialList socialLink={socialLink}/>
+                        <Menu items={menuItems}/>
+                        <SocialList socialLinks={socialLinks}/>
                     </HeaderMenu>
                 </FlexWrapper>
-            </StyleContainer>
+            </Container>
         </StyledHeader>
     )
         ;

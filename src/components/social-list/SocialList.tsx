@@ -2,11 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import Icon from "../icon/Icon";
 
-const SocialList = (props: { socialLink: Array<string> }) => {
+const SocialList = (props: { socialLinks: Array<string> }) => {
     return (
         <StyledSocialList>
             <ul>
-                {props.socialLink.map((item, key) => {
+                {props.socialLinks.map((item, key) => {
                     return (
                         <StyledSocialItem>
                             <StyledSocialLink  href={"#"}>

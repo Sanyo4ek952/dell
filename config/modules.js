@@ -113,7 +113,7 @@ function getModules() {
     }));
     config = ts.readConfigFile(paths.appTsConfig, ts.sys.readFile).config;
     // Otherwise we'll check if there is jsconfig.json
-    // for non TS projects.
+    // for non TS project.
   } else if (hasJsConfig) {
     config = require(paths.appJsConfig);
   }

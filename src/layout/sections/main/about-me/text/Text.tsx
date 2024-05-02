@@ -16,9 +16,10 @@ export default Text;
 
 const StyledText = styled.div`
     font-weight: 700;
-    font-size: 58px;
+
     line-height: 70px;
     letter-spacing: 1px;
+    font-size: 58px; 
 
     p > span {
         background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));

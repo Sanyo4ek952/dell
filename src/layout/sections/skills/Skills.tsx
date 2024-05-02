@@ -1,20 +1,17 @@
 import React from 'react';
 import {Title} from "../../../components/Tiltle";
-import {StyleContainer} from "../../../styles/StyleContainer";
+import {Container} from "../../../styles/Container";
 import Icon from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
 
 
-type SkillsTypeProps = {
-    marginBottom?: string
-    id?: string
-}
 
-export const Skills = (props: SkillsTypeProps) => {
+
+export const Skills = () => {
     return (
         <StyleSkills>
-            <StyleContainer maxWidth={"1270"}>
+            <Container>
                 <Title marginBottom={"140px"} mainTitle={"My Tech Stack"}
                        subTitle={" Technologies I’ve been working with recently"}/>
                 <FlexWrapper justify={"center"}
@@ -35,11 +32,11 @@ export const Skills = (props: SkillsTypeProps) => {
                     <Icon iconId={"vscode"} width={"120px"} height={"120px"} viewBox={"0 0 112 112"}/>
                     <Icon iconId={"githubSkill"} width={"120px"} height={"120px"} viewBox={"0 0 88 88"}/>
                 </FlexWrapper>
-            </StyleContainer>
+            </Container>
         </StyleSkills>
     );
 };
 
 const StyleSkills = styled.section`
-    
+    padding: 50px 0;
     `

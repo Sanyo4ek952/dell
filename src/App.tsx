@@ -2,16 +2,16 @@ import './App.css';
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/main/Main";
 import React from "react";
-import {StylesApp} from "./styles/StylesApp";
+import {StyledApp} from "./styles/StyledApp";
 import {Footer} from "./layout/footer/Footer";
 
-export const socialLink = [
+export const socialLinks = [
     "gitHub",
     "twitter",
     "linkedin"
 ]
 
-export const itemsMenu = [
+export const menuItems = [
     "Home",
     "About",
     "Tech Stack",
@@ -22,11 +22,11 @@ export const itemsMenu = [
 function App() {
     return (
         // eslint-disable-next-line react/jsx-no-undef
-        <StylesApp bgcolor={'black'} className="App">
+        <StyledApp bgcolor={'black'} className="App">
             <Header/>
             <Main/>
             <Footer/>
-        </StylesApp>
+        </StyledApp>
     );
 }
 

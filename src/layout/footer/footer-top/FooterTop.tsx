@@ -2,7 +2,7 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Logo} from "../../../components/logo/Logo";
 import SocialList from "../../../components/social-list/SocialList";
-import {socialLink} from "../../../App";
+import {socialLinks} from "../../../App";
 import styled from "styled-components";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import {MdEmail} from "react-icons/md";
@@ -25,7 +25,7 @@ export const FooterTop = () => {
                             <a href="mailto:info@example.com">info@example.com</a>
                         </div>
                     </StyledContacts>
-                    <SocialList socialLink={socialLink}/>
+                    <SocialList socialLinks={socialLinks}/>
             </FlexWrapper>
         </StyledFooterTop>
     );
