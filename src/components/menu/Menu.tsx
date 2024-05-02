@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {GradientHoverLink, GradientLink} from "../../styles/GradientLink";
 
 type MenuPropsType = {
     items: Array<string>
@@ -13,9 +14,9 @@ export const Menu = (props: MenuPropsType) => {
                 {props.items.map((item, key) => {
                         return (
                             <li key={key}>
-                                <a href="">
+                                <GradientHoverLink href="">
                                     {item}
-                                </a>
+                                </GradientHoverLink>
                             </li>
                         )
                     }
@@ -41,11 +42,10 @@ ul{
 
     }
 }
-    a {
+    ${GradientLink} {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.3;
-        color: #a7a7a7;
 
         &:hover {
             text-decoration: underline;

@@ -11,12 +11,10 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 export const Header = () => {
     return (
         <StyledHeader>
-            <StyleContainer>
-                <FlexWrapper justify={'space-between'}
-                rowGap={"20"}
-                columnGap={'20'}>
+            <StyleContainer paddingTop={"0"} paddingBottom={"0"}>
+                <FlexWrapper justify={'space-between'}>
                     <Logo viewBox={"0 0 97  59"}
-                          iconId='logoGrey'
+                          iconId={'logoGrey'}
                           width={'97'}
                           height={"59"}/>
                     <HeaderMenu>
@@ -38,6 +36,9 @@ const StyledHeader = styled.header`
     top: 0;
     left: 0;
     z-index: 99999;
+    ${FlexWrapper}{
+        gap: 20px;
+    }
 
 `
 const HeaderMenu=styled.div`

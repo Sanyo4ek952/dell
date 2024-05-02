@@ -7,7 +7,7 @@ import {FooterBottom} from "./footer-bottom/FooterBottom";
 export const Footer = () => {
     return (
         <StyledFooter>
-            <StyleContainer>
+            <StyleContainer paddingBottom={"0"}>
                 <FooterTop/>
                 <FooterBottom/>
             </StyleContainer>

@@ -6,12 +6,12 @@ import {Email} from "./email/Email";
 
 export const Main = () => {
     return (
-        <div>
-            <AboutMe marginTop="150" marginBottom="200"/>
-            <Skills id="skill" marginBottom={"205"} />
+        <main>
+            <AboutMe />
+            <Skills id="skill"  />
             <Project/>
             <Email/>
-        </div>
+        </main>
     );
 };
 

@@ -13,7 +13,7 @@ export const Logo = (props: LogoPropsType) => {
     return (
         <StyledIconLink href="">
             <Icon viewBox={props.viewBox}
-                  iconId='logoGrey'
+                  iconId="logoGrey"
                   width={props.width}
                   height={props.height}/>
         </StyledIconLink>
@@ -23,4 +23,6 @@ export const Logo = (props: LogoPropsType) => {
 
 const StyledIconLink = styled.a`
 display: flex;
+    
 `
+

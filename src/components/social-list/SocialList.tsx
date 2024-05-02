@@ -9,7 +9,7 @@ const SocialList = (props: { socialLink: Array<string> }) => {
                 {props.socialLink.map((item, key) => {
                     return (
                         <StyledSocialItem>
-                            <StyledSocialLink href={""}>
+                            <StyledSocialLink  href={"#"}>
                                 <Icon key={key} iconId={item}/>
                             </StyledSocialLink>
                         </StyledSocialItem>
@@ -23,12 +23,7 @@ const SocialList = (props: { socialLink: Array<string> }) => {
 export default SocialList;
 
 const StyledSocialList = styled.nav`
-    & svg{
-        fill:#DE4C36;
-    }
-    &:hover svg {
-        fill:blue;
-    }
+
     @media (max-width: 600px) {
         display: none;
     }
@@ -36,6 +31,7 @@ const StyledSocialList = styled.nav`
     ul {
         display: flex;
         gap: 20px;
+        flex-wrap: nowrap;
     }
 `
 const StyledSocialItem = styled.li`

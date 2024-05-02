@@ -21,7 +21,9 @@ const StyledText = styled.div`
     letter-spacing: 1px;
 
     p > span {
-        color: blueviolet;
+        background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));
+        -webkit-background-clip: text;
+        color: transparent;
     }
     @media (max-width: 620px)  {
 text-align: center;

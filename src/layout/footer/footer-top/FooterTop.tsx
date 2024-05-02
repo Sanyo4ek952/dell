@@ -14,9 +14,7 @@ export const FooterTop = () => {
                       iconId='logoGrey'
                       width={'97'}
                       height={"59"}/>
-                <FlexWrapper columnGap={"20"}
-                             justify={"space-between"}
-                flex={"0 1 538px"}>
+                <FlexWrapper justify={"space-between"}                >
                     <StyledContacts>
                         <div>
                             <BsFillTelephoneFill />
@@ -34,18 +32,28 @@ export const FooterTop = () => {
 };
 
 const StyledFooterTop = styled.div`
-min-height: 100px;
+    min-height: 100px;
     display: flex;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(66, 68, 110);
 
+    ${FlexWrapper} {
+        gap: 20px;
+flex: 0 1 760px;
+        @media (max-width: 480px) {
+            justify-content: flex-end;
+        }
+    }
+
 `
 
 const StyledContacts = styled.div`
     display: flex;
-    gap: 35px;
+    flex: 1 1 auto;
+    gap: 10px;
+    justify-content: space-around;
 flex-wrap: wrap;
     div{
         display: flex;

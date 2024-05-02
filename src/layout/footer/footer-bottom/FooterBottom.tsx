@@ -2,13 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../../../components/menu/Menu";
 import {itemsMenu} from "../../../App";
+import {GradientLink} from "../../../styles/GradientLink";
 
 export const FooterBottom = () => {
     return (
         <StyledFooterBottom>
             <Menu items={itemsMenu}/>
             <StyledCopyright>
-                Designed and built by <a href="">Alexander</a> with <a href="">Love</a> & <a href="">Coffee</a>
+                Designed and built by <GradientLink href="">Alexander</GradientLink> with <GradientLink href="">Love</GradientLink> & <GradientLink href="">Coffee</GradientLink>
             </StyledCopyright>
         </StyledFooterBottom>
     );
@@ -18,15 +19,10 @@ const StyledFooterBottom = styled.div`
 display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 35px;
+    gap: 15px;
     min-height: 100px;
 `
 
 const StyledCopyright = styled.p`
-a{
-    color:rgb(19, 176, 245);
-}
-    a:hover{
-        text-decoration: underline;
-    }
+text-align: right;
 `
