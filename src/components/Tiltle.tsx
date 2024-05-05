@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {adaptiveFont} from "../styles/GlobalSyles";
 
 type TitleTypeProps = {
     mainTitle:string
@@ -8,7 +9,7 @@ type TitleTypeProps = {
 }
 export const Title = (props:TitleTypeProps) => {
     return (
-        <StyledTitle marginBottom={props.marginBottom}>
+        <StyledTitle >
             <h2>{props.mainTitle}</h2>
             <h3>{props.subTitle}</h3>
         </StyledTitle>
@@ -26,15 +27,15 @@ const StyledTitle = styled.div<StyledTitleTypeProps>`
     gap: 50px;
     line-height: 1.1;
     align-items: center;
-    margin-bottom: ${props => props.marginBottom};
+    margin-bottom: ${adaptiveFont(100,50)};
 
     h2 {
         font-weight: 700;
-        font-size: 48px;
+        font-size: ${adaptiveFont(48,36)};
     }
 
     h3 {
-        font-size: 32px;
+        font-size: ${adaptiveFont(36,20)};
         color: rgb(167, 167, 167)
     }
 `

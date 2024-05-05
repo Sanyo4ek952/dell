@@ -1,9 +1,10 @@
 import React from 'react';
-import {Title} from "../../../components/Tiltle";
-import {Container} from "../../../styles/Container";
-import Icon from "../../../components/icon/Icon";
-import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Title} from "../../../../components/Tiltle";
+import {Container} from "../../../../styles/Container";
+import Icon from "../../../../components/icon/Icon";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
+import {adaptiveFont} from "../../../../styles/GlobalSyles";
 
 
 
@@ -16,9 +17,7 @@ export const Skills = () => {
                        subTitle={" Technologies I’ve been working with recently"}/>
                 <FlexWrapper justify={"center"}
                              align={"center"}
-                             wrap={"wrap"}
-                             columnGap="95"
-                             rowGap="55">
+                             wrap={"wrap"}>
                     <Icon iconId={"html"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"css"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"js"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
@@ -38,5 +37,10 @@ export const Skills = () => {
 };
 
 const StyleSkills = styled.section`
-    padding: 50px 0;
+    padding: ${adaptiveFont(50,25)} 0;
+    ${FlexWrapper}{
+        column-gap: 95px;
+        row-gap: 55px;
+        
+    }
     `

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Container} from "../../../../styles/Container";
 import {GradientLink} from "../../../../styles/GradientLink";
+import {adaptiveFont} from "../../../../styles/GlobalSyles";
 
 export const Contacts = () => {
     return (
@@ -16,7 +17,8 @@ export const Contacts = () => {
 
 
 const StyledEmail = styled.div`
-    padding: 100px 0;
+    padding-top:  ${adaptiveFont(100,50)}  ;
+    padding-bottom:  ${adaptiveFont(100,50)}  ;
     font-weight: 700;
     font-size: 58px;
     line-height: 70px;

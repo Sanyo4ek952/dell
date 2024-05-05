@@ -37,7 +37,7 @@ ul{
     column-gap: 50px;
     row-gap: 15px;
     justify-content: center;
-    @media (max-width: 440px) {
+    @media (max-width: 768px) {
         display: none;
 
     }
@@ -83,7 +83,7 @@ ul{
             }
         }
 
-        @media (min-width: 440px) {
+        @media (min-width: 768px) {
             display: none;
 
         }

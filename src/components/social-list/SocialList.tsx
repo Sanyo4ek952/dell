@@ -23,7 +23,6 @@ const SocialList = (props: { socialLinks: Array<string> }) => {
 export default SocialList;
 
 const StyledSocialList = styled.nav`
-
     @media (max-width: 600px) {
         display: none;
     }

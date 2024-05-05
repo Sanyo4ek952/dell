@@ -6,6 +6,7 @@ import {Container} from "../../styles/Container";
 import {menuItems, socialLinks} from "../../App";
 import SocialList from "../../components/social-list/SocialList";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {Themes} from "../../styles/Themes";
 
 
 export const Header = () => {
@@ -29,7 +30,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: #000;
+    background-color: ${Themes.color.mainBG};
     width: 100%;
     padding: 30px 0;
     position: fixed;
@@ -47,7 +48,7 @@ const HeaderMenu=styled.div`
     gap: 15px;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 440px) {
+    @media (max-width: 768px) {
         display: flex;
         justify-content: flex-end;
         align-items: center;

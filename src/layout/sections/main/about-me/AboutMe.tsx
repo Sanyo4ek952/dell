@@ -4,6 +4,7 @@ import Text from "./text/Text";
 import styled from "styled-components";
 import {Container} from "../../../../styles/Container";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {adaptiveFont} from "../../../../styles/GlobalSyles";
 
 
 
@@ -27,10 +28,9 @@ export default AboutMe;
 
 
 const StyledAboutMe = styled.section`
-    padding: 190px 0 50px;
+    padding: ${adaptiveFont(190,120)} 0 ${adaptiveFont(50,25)};
 
     ${FlexWrapper} {
-
         gap: 30px;
         @media (max-width: 620px) {
             flex-direction: column-reverse;

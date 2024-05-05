@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {Themes} from "./Themes";
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -33,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
-        color: #CCCCCC;
+        color: ${Themes.color.mainFont};
         background-color: black;
         position: relative;
         font-size: 18px;
@@ -89,4 +90,11 @@ const GlobalStyles = createGlobalStyle`
 
 
 `;
+
 export default GlobalStyles;
+
+//Адаптивный шрифт
+export const adaptiveFont = (  Fmax:number,Fmin:number  )=>{
+    return `calc( (min(100vw, 1200px) - 320px)/(1200 - 320) * (${Fmax} - ${Fmin}) + ${Fmin}px)`
+
+}

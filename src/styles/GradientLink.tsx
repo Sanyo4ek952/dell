@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Themes} from "./Themes";
 
 export const GradientHoverLink = styled.a`
     position: relative;
@@ -8,7 +9,7 @@ export const GradientHoverLink = styled.a`
         display: flex;
         width: 100%;
         height: 0.1em;
-        background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));
+        background-image: ${Themes.color.mainGradient};
         position: absolute;
         bottom: 2px;
         left: 0;
@@ -18,7 +19,7 @@ export const GradientHoverLink = styled.a`
 
     &:hover {
         text-decoration: underline;
-        background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));
+        background-image: ${Themes.color.mainGradient};
         -webkit-background-clip: text;
         color: transparent;
 
@@ -28,7 +29,7 @@ export const GradientHoverLink = styled.a`
     }
 `
 export const GradientLink = styled.a`
-    background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));
+    background-image: ${Themes.color.mainGradient};
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
@@ -38,7 +39,7 @@ export const GradientLink = styled.a`
         display: flex;
         width: 100%;
         height: 0.1em;
-        background-image: linear-gradient(90.00deg, rgb(19, 176, 245), rgb(231, 15, 170));
+        background-image: ${Themes.color.mainGradient};
         position: absolute;
         bottom: 2px;
         left: 0;

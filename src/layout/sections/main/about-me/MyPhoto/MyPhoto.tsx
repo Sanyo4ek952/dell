@@ -39,15 +39,16 @@ const StylesMyPhoto = styled.div<StylesMyPhotoTypeProps>`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     div {
-        width: ${props  => {
-            let sum = props.width + 20 +"px"
+        width: ${props => {
+            let sum = props.width + 20 + "px"
             return sum
-        }  };
-        height: ${props  => {
-           let sum = props.height + 20 +"px"
+        }};
+        height: ${props => {
+            let sum = props.height + 20 + "px"
             return sum
-        }  };
+        }};
         border-radius: 50%;
         background: linear-gradient(180deg, rgb(231, 15, 170) 0%, rgb(0, 192, 253) 100%);
         @media (max-width: 820px) {
@@ -65,6 +66,7 @@ const StylesMyPhoto = styled.div<StylesMyPhotoTypeProps>`
         height: ${props => props.height}px;
         object-fit: cover;
         border-radius: 50%;
+        
         @media (max-width: 820px) {
             width: 250px;
             height: 250px;

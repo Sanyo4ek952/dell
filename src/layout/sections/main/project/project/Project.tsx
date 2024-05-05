@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Themes} from "../../../../../styles/Themes";
 
 type ProjectCartPropsType = {
     title: string,
@@ -8,8 +9,8 @@ type ProjectCartPropsType = {
     techStack?: string
     fontWeight?: string
     image: string
-    srcProject:string
-    imageWebp:string
+    srcProject: string
+    imageWebp: string
 }
 
 export const Project = (props: ProjectCartPropsType) => {
@@ -37,29 +38,45 @@ export const Project = (props: ProjectCartPropsType) => {
         </StyledProjectCart>
     );
 };
-
 const StyledProjectCart = styled.a`
     flex: 1 1 375px;
-
+    max-width: 500px;
     display: flex;
     border-radius: 20px;
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
-    background: rgb(54, 54, 54);
+    background-color: rgb(54, 54, 54);
     transition: all 0.3s ease-in;
+    position: relative;
 
     article {
         display: flex;
+        width: 100%;
         flex-direction: column;
+        position: relative;
+        z-index: 3;
+
     }
-    
 
     strong {
         display: inline;
     }
 
     &:hover {
-        transform: scale(1.1);
+        
         transition: all 0.3s ease-in-out;
+        @media (min-width: 768px) {
+            transform: scale(1.05);
+            &::before {
+                content: "";
+                position: absolute;
+                inset: -1px; /* управляет расстоянием рассеивания */
+                transform: scale(1.02); /* управляет смещением */
+                z-index: 0; /* располагает элемент позади основного */
+                background: ${Themes.color.mainGradient} /* здесь находится ваш градиент */;
+                filter: blur(10px); /* управляет размытием */
+            }
+        }
+
+        
 
     }
 
@@ -71,20 +88,11 @@ const StyledProjectCart = styled.a`
         }
     }
 `
-const Body = styled.div`
-    padding: 25px 30px;
-    gap: 10px;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
 
-    & > *:not(:last-child) {
-        margin-bottom: 10px;
-    }
-`
 const ContainerImage = styled.div`
     position: relative;
     padding-top: 69%;
+
     & img {
         position: absolute;
         width: 100%;
@@ -97,10 +105,27 @@ const ContainerImage = styled.div`
     }
 `
 
+const Body = styled.div`
+    padding: 25px 30px;
+    gap: 10px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(54, 54, 54);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    & > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+`
+
 const StyledProjectTitle = styled.h4`
     font-size: 28px;
     font-weight: 500;
     line-height: 26px;
+    max-height: 54px;
+    overflow: hidden;
 `
 
 const StyledProjectText = styled.div`
@@ -123,3 +148,5 @@ const StyledProjectText = styled.div`
         font-size: 14px;
     }
 `
+
+
