@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Icon from "../icon/Icon";
+import {theme} from "../../styles/Theme";
 
 const SocialList = (props: { socialLinks: Array<string> }) => {
     return (
@@ -23,14 +24,14 @@ const SocialList = (props: { socialLinks: Array<string> }) => {
 export default SocialList;
 
 const StyledSocialList = styled.nav`
-    @media (max-width: 600px) {
-        display: none;
-    }
 
     ul {
         display: flex;
         gap: 20px;
         flex-wrap: nowrap;
+    }
+    @media ${theme.media.desktop} {
+        display: none;
     }
 `
 const StyledSocialItem = styled.li`

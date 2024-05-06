@@ -28,7 +28,6 @@ export default AboutMe;
 
 
 const StyledAboutMe = styled.section`
-    padding: ${adaptiveFont(190,120)} 0 ${adaptiveFont(50,25)};
 
     ${FlexWrapper} {
         gap: 30px;

@@ -6,7 +6,8 @@ import {Container} from "../../styles/Container";
 import {menuItems, socialLinks} from "../../App";
 import SocialList from "../../components/social-list/SocialList";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {Themes} from "../../styles/Themes";
+import {theme} from "../../styles/Theme";
+import {MobileMenu} from "../../components/menu/mobile-menu/MobileMenu";
 
 
 export const Header = () => {
@@ -20,6 +21,7 @@ export const Header = () => {
                           height={"59"}/>
                     <HeaderMenu>
                         <Menu items={menuItems}/>
+                        <MobileMenu items={menuItems}/>
                         <SocialList socialLinks={socialLinks}/>
                     </HeaderMenu>
                 </FlexWrapper>
@@ -30,7 +32,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: ${Themes.color.mainBG};
+    background-color: ${theme.color.mainBG};
     width: 100%;
     padding: 30px 0;
     position: fixed;

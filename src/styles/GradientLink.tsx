@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Themes} from "./Themes";
+import {theme} from "./Theme";
 
-export const GradientHoverLink = styled.a`
+export const GradientHoverLink = styled.a `
     position: relative;
 
     &:after {
@@ -9,7 +9,7 @@ export const GradientHoverLink = styled.a`
         display: flex;
         width: 100%;
         height: 0.1em;
-        background-image: ${Themes.color.mainGradient};
+        background-image: ${theme.color.mainGradient};
         position: absolute;
         bottom: 2px;
         left: 0;
@@ -19,7 +19,7 @@ export const GradientHoverLink = styled.a`
 
     &:hover {
         text-decoration: underline;
-        background-image: ${Themes.color.mainGradient};
+        background-image: ${theme.color.mainGradient};
         -webkit-background-clip: text;
         color: transparent;
 
@@ -29,31 +29,34 @@ export const GradientHoverLink = styled.a`
     }
 `
 export const GradientLink = styled.a`
-    background-image: ${Themes.color.mainGradient};
+    background-image: ${theme.color.mainGradient};
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
-
-    &:after {
-        content: "";
-        display: flex;
-        width: 100%;
-        height: 0.1em;
-        background-image: ${Themes.color.mainGradient};
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        transform: scaleX(0);
-        transition: 0.3s ease-in-out;
-
-    }
-
-    &:hover {
-        text-decoration: underline;
+    @media ${theme.media.desktop} {
         &:after {
-
-            transform: scale(1);
+            content: "";
+            display: flex;
+            width: 100%;
+            height: 0.1em;
+            background-image: ${theme.color.mainGradient};
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            transform: scaleX(0);
+            transition: 0.3s ease-in-out;
 
         }
+
+        &:hover {
+            text-decoration: underline;
+
+            &:after {
+
+                transform: scale(1);
+
+            }
+        }
+
     }
 `

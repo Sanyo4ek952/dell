@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Themes} from "../../../../../styles/Themes";
+import {theme} from "../../../../../styles/Theme";
 
 type ProjectCartPropsType = {
     title: string,
@@ -71,7 +71,7 @@ const StyledProjectCart = styled.a`
                 inset: -1px; /* управляет расстоянием рассеивания */
                 transform: scale(1.02); /* управляет смещением */
                 z-index: 0; /* располагает элемент позади основного */
-                background: ${Themes.color.mainGradient} /* здесь находится ваш градиент */;
+                background: ${theme.color.mainGradient} /* здесь находится ваш градиент */;
                 filter: blur(10px); /* управляет размытием */
             }
         }

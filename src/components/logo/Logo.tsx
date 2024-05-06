@@ -23,6 +23,7 @@ export const Logo = (props: LogoPropsType) => {
 
 const StyledIconLink = styled.a`
 display: flex;
-    
+    position: relative;
+    z-index: 333;
 `
 
