@@ -12,7 +12,7 @@ export const StyledApp = styled.div<StylesAppTypeProps>`
     flex-direction: column;
 min-height: 100vh;
     main {
-        padding: ${adaptiveFont(120, 120)} 0 ${adaptiveFont(50, 25)};
+        padding: ${adaptiveFont(120, 80)} 0 ${adaptiveFont(50, 25)};
 
         flex: 1 0 auto;
         display: flex;
