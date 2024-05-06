@@ -8,6 +8,7 @@ import SocialList from "../../components/social-list/SocialList";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
 import {MobileMenu} from "../../components/menu/mobile-menu/MobileMenu";
+import {adaptiveFont} from "../../styles/GlobalSyles";
 
 
 export const Header = () => {
@@ -34,7 +35,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: ${theme.color.mainBG};
     width: 100%;
-    padding: 30px 0;
+    padding: ${adaptiveFont(30,15)} 0;
     position: fixed;
     top: 0;
     left: 0;
