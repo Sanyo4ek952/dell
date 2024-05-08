@@ -9,23 +9,10 @@ import {Projects} from "./layout/sections/main/project/Projects";
 import AboutMe from "./layout/sections/main/about-me/AboutMe";
 import {Skills} from "./layout/sections/main/skills/Skills";
 import {Contacts} from "./layout/sections/main/contacts/Contacts";
-import ScrollToTop from "./styles/ScrollToTop";
 
 
-export const socialLinks = [
-    "gitHub",
-    "twitter",
-    "linkedin"
-]
 
-export const menuItems = [
-    {title: "Home", href: "/"},
-    {title: "About", href: "/about"},
-    {title: "Tech Stack", href: "/skills"},
-    {title: "Projects", href: "/projects"},
-    {title: "Contact", href: "/contact"},
 
-]
 
 function App() {
     return (

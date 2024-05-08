@@ -33,7 +33,7 @@ export const GradientLink = styled.a`
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
-    @media ${theme.media.desktop} {
+    @media ${theme.media.tablet} {
         &:after {
             content: "";
             display: flex;
@@ -52,9 +52,7 @@ export const GradientLink = styled.a`
             text-decoration: underline;
 
             &:after {
-
                 transform: scale(1);
-
             }
         }
 

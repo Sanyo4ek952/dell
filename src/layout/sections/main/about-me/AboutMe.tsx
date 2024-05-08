@@ -4,11 +4,10 @@ import Text from "./text/Text";
 import styled from "styled-components";
 import {Container} from "../../../../styles/Container";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {adaptiveFont} from "../../../../styles/GlobalSyles";
 
 
 
-const AboutMe = () => {
+const AboutMe:React.FC = () => {
     return (
         <StyledAboutMe>
             <Container>

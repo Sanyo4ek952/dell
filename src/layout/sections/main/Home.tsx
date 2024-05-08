@@ -4,7 +4,7 @@ import {Skills} from "./skills/Skills";
 import {Projects} from "./project/Projects";
 import {Contacts} from "./contacts/Contacts";
 
-export const Home = () => {
+export const Home:React.FC = () => {
     return (
         <main>
             <AboutMe/>

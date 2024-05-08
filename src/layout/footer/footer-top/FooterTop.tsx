@@ -2,10 +2,10 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Logo} from "../../../components/logo/Logo";
 import SocialList from "../../../components/social-list/SocialList";
-import {socialLinks} from "../../../App";
 import styled from "styled-components";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import {MdEmail} from "react-icons/md";
+import {socialLinks} from "../../header/Header";
 
 export const FooterTop = () => {
     return (

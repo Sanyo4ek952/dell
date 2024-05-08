@@ -6,10 +6,25 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import {adaptiveFont} from "../../../../styles/GlobalSyles";
 
+const skillData=[
+    {iconId:"html"},
+    {iconId:"css"},
+    {iconId:"js"},
+    {iconId:"react"},
+    {iconId:"redux"},
+    {iconId:"bootstrap"},
+    {iconId:"tailwind"},
+    {iconId:"sass"},
+    {iconId:"git"},
+    {iconId:"greensock"},
+    {iconId:"vscode"},
+    {iconId:"githubSkill"},
+
+]
 
 
 
-export const Skills = () => {
+export const Skills:React.FC = () => {
     return (
         <StyleSkills>
             <Container>
@@ -18,7 +33,12 @@ export const Skills = () => {
                 <FlexWrapper justify={"center"}
                              align={"center"}
                              wrap={"wrap"}>
-                    <Icon iconId={"html"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
+                    {skillData.map(skill=>{
+                        return(
+                            <Icon iconId={skill.iconId} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
+                        )
+                    })}
+                    {/*<Icon iconId={"html"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"css"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"js"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"react"} width={"120px"} height={"120px"} viewBox={"0 0 113 101"}/>
@@ -29,7 +49,7 @@ export const Skills = () => {
                     <Icon iconId={"git"} width={"120px"} height={"120px"} viewBox={"0 0 105 105"}/>
                     <Icon iconId={"greensock"} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                     <Icon iconId={"vscode"} width={"120px"} height={"120px"} viewBox={"0 0 112 112"}/>
-                    <Icon iconId={"githubSkill"} width={"120px"} height={"120px"} viewBox={"0 0 88 88"}/>
+                    <Icon iconId={"githubSkill"} width={"120px"} height={"120px"} viewBox={"0 0 88 88"}/>*/}
                 </FlexWrapper>
             </Container>
         </StyleSkills>

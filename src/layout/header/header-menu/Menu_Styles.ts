@@ -1,43 +1,39 @@
-import React, {useState} from 'react';
 import styled, {css} from "styled-components";
-import { GradientLink} from "../../../styles/GradientLink";
+import {GradientHoverLink, GradientLink} from "../../../styles/GradientLink";
 import {theme} from "../../../styles/Theme";
-import {NavLink} from "react-router-dom";
 
-type MenuPropsType = {
-    items: Array<{ title: string, href: string }>
-}
 
-export const MobileMenu = (props: MenuPropsType) => {
-    const [menuIsOpen, setmenuIsOpen] = useState(false)
-    const onBurgerBtnClick = ()=>{
-        setmenuIsOpen(!menuIsOpen);
+const DesktopMenu = styled.nav`
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 15px;
+        justify-content: center;
     }
-    return (
-        <StyledMobileMenu isOpen={menuIsOpen} onClick={()=>{setmenuIsOpen(!menuIsOpen)}}>
-            <ul>
-                {props.items.map((item, key) => {
-                        return (
-                            <li key={key}>
-                                <NavLink to={item.href}>
-                                <GradientLink href="">
-                                    {item.title}
-                                </GradientLink>
-                                </NavLink>
-                            </li>
-                        )
-                    }
-                )
-                }
-            </ul>
-            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
-                <span></span>
-            </BurgerButton>
-        </StyledMobileMenu>
-    )
+
+    ${GradientLink} {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.3;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
 }
 
-const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
+`
+
+
+
+
+//Меню для мобильного
+
+const MobileMenu = styled.nav<{ isOpen?: boolean }>`
 
     ul {
         display: flex;
@@ -57,12 +53,12 @@ const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
         justify-content: center;
         transition: all 0.4s ease 0.4s;
 
-        ${props => props.isOpen && css<{ isOpen: boolean }>`
+        ${props => props.isOpen && css<{ isOpen?: boolean }>`
             display: flex;
             transform: translateY(0);
-            transition: all 0.4s ease ;
+            transition: all 0.4s ease;
         `}
-        ${GradientLink} {
+        ${GradientHoverLink} {
             font-weight: 500;
             font-size: 36px;
             line-height: 1.3;
@@ -70,9 +66,6 @@ const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
 
         }
 
-        @media ${theme.media.tablet} {
-            display: none;
-        }
 
     }
 
@@ -90,7 +83,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         width: 30px;
         height: 2px;
         position: relative;
-        
+
 
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 255, 255, 0);
@@ -129,4 +122,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
 
 `
+export const S = {
+    MobileMenu,
+    BurgerButton,
+    DesktopMenu,
 
+}
