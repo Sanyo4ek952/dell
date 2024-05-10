@@ -3,7 +3,6 @@ import {them} from "./Them";
 
 export const GradientHoverLink = styled.a `
     position: relative;
-
     &:after {
         content: "";
         display: flex;
