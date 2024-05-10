@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {css} from "styled-components";
-import {theme} from "../../styles/Theme";
+import {them} from "../../styles/Them";
 
 export type TabsStatusType = "all" | "React" | "Landing page"| "Spa"
 type TabMenuPropsType = {
@@ -41,7 +41,7 @@ content: "";
         transition: 0.3s ease-in-out;
     }
 ${props=>props.active && css<{active?: boolean}>`
-    background-image: ${theme.color.mainGradient};
+    background-image: ${them.color.mainGradient};
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
@@ -51,7 +51,7 @@ ${props=>props.active && css<{active?: boolean}>`
         display: flex;
         width: 100%;
         height: 0.1em;
-        background-image: ${theme.color.mainGradient};
+        background-image: ${them.color.mainGradient};
         position: absolute;
         bottom: 2px;
         left: 0;

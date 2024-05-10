@@ -1,21 +1,18 @@
 import React from 'react';
-import styled from "styled-components";
+import {S} from "./Footer_Styles";
 import {Container} from "../../styles/Container";
 import {FooterTop} from "./footer-top/FooterTop";
 import {FooterBottom} from "./footer-bottom/FooterBottom";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
                 <FooterTop/>
                 <FooterBottom/>
             </Container>
-        </StyledFooter>
+        </S.Footer>
     );
 };
 
 
-const StyledFooter = styled.footer`
-
-`

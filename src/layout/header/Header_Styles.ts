@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {adaptiveFont} from "../../styles/GlobalSyles";
-import {theme} from "../../styles/Theme";
+import {them} from "../../styles/Them";
 
 const Header = styled.header`
-    background-color: ${theme.color.mainBG};
+    background-color: ${them.color.mainBG};
     width: 100%;
     padding: ${adaptiveFont(30,15)} 0;
     position: fixed;

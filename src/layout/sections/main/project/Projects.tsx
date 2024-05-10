@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Container} from "../../../../styles/Container";
 import {Title} from "../../../../components/Tiltle";
 import {Project} from "./project/Project";
-import styled from "styled-components";
 import image2 from "../../../../assets/image/project-image/prohect3.png"
 import image2Webp from "../../../../assets/image/project-image/prohect3.webp"
 import Tvintos from "../../../../assets/image/project-image/Tvintos.png"
@@ -11,10 +10,10 @@ import marcetMils from "../../../../assets/image/project-image/market-mils.png"
 import marcetMilsWebp from "../../../../assets/image/project-image/market-mils.webp"
 import ELEAN from "../../../../assets/image/project-image/Screenshot_3.png"
 import ELEANWebp from "../../../../assets/image/project-image/Screenshot_3.webp"
-
+import {S} from "./Project_Styles"
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-import {adaptiveFont} from "../../../../styles/GlobalSyles";
 import {TabMenu, TabsStatusType} from "../../../../components/tab-menu/TabMenu";
+import {ScrollToTop} from "../../../../components/ScrollToTop";
 
 const tabsItems: Array<{ title: string, status: "all" | "React" | "Landing page" | "Spa" }> = [
     {title: "All", status: "all"},
@@ -105,7 +104,8 @@ export const Projects: React.FC = () => {
     }
 
     return (
-        <StyledProject>
+        <S.Project>
+
             <Container>
                 <Title marginBottom={"115px"} mainTitle="Projects" subTitle={'Things I’ve built so far'}/>
                 <TabMenu
@@ -122,23 +122,12 @@ export const Projects: React.FC = () => {
                                     subtext={project.subtext}
                                     techStack={project.techStack}
                                     text={project.text}/>
-
                             )
                         }
                     )
                     }
                 </FlexWrapper>
             </Container>
-        </StyledProject>
+        </S.Project>
     );
 };
-const StyledProject = styled.section`
-    padding-top: ${adaptiveFont(50, 25)};
-    padding-bottom: ${adaptiveFont(50, 25)};
-
-    ${FlexWrapper} {
-
-        gap: 35px;
-        flex-wrap: wrap;
-    }
-`

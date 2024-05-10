@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Icon from "../icon/Icon";
-import {theme} from "../../styles/Theme";
+import {them} from "../../styles/Them";
 
 const SocialList = (props: { socialLinks: Array<string> }) => {
     return (
@@ -30,7 +30,7 @@ const StyledSocialList = styled.nav`
         gap: 20px;
         flex-wrap: nowrap;
     }
-    @media ${theme.media.desktop} {
+    @media ${them.media.desktop} {
         display: none;
     }
 `

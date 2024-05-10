@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
 import {GradientHoverLink, GradientLink} from "../../../styles/GradientLink";
-import {theme} from "../../../styles/Theme";
+import {them} from "../../../styles/Them";
 
 
 const DesktopMenu = styled.nav`
@@ -44,7 +44,7 @@ const MobileMenu = styled.nav<{ isOpen?: boolean }>`
         right: 0;
         bottom: 0;
         background-color: rgb(0, 0, 0);
-        color: ${theme.color.mainGradient};
+        color: ${them.color.mainGradient};
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
@@ -62,7 +62,7 @@ const MobileMenu = styled.nav<{ isOpen?: boolean }>`
             font-weight: 500;
             font-size: 36px;
             line-height: 1.3;
-            color: ${theme.color.mainGradient};
+            color: ${them.color.mainGradient};
 
         }
 
@@ -116,7 +116,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         }
     }
 
-    @media ${theme.media.tablet} {
+    @media ${them.media.tablet} {
         display: none;
 
     }

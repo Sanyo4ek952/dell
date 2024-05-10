@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {theme} from "../../../../../styles/Theme";
+import {them} from "../../../../../styles/Them";
 import {adaptiveFont} from "../../../../../styles/GlobalSyles";
 const Text = () => {
     return (
@@ -27,7 +27,7 @@ const StyledText = styled.div`
     letter-spacing: 1px;
 
     p > span {
-        background-image: ${theme.color.mainGradient};
+        background-image: ${them.color.mainGradient};
         -webkit-background-clip: text;
         color: transparent;
     }

@@ -4,12 +4,13 @@ import Text from "./text/Text";
 import styled from "styled-components";
 import {Container} from "../../../../styles/Container";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
-
+import {ScrollToTop} from "../../../../components/ScrollToTop";
 
 
 const AboutMe:React.FC = () => {
     return (
         <StyledAboutMe>
+            <ScrollToTop/>
             <Container>
                 <FlexWrapper justify={"space-between"}
                 align={"center"}>

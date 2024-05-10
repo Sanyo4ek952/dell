@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import {theme} from "./Theme";
+import {them} from "./Them";
 import {adaptiveFont} from "./GlobalSyles";
 
 type StylesAppTypeProps = {
     bgcolor: string;
 }
 export const StyledApp = styled.div<StylesAppTypeProps>`
-    background-color: ${theme.color.mainBG};
+    background-color: ${them.color.mainBG};
     margin: 0 auto;
     display: flex;
     flex-direction: column;

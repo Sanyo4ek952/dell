@@ -5,36 +5,38 @@ import Icon from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import {adaptiveFont} from "../../../../styles/GlobalSyles";
+import {them} from "../../../../styles/Them";
+import {ScrollToTop} from "../../../../components/ScrollToTop";
 
-const skillData=[
-    {iconId:"html"},
-    {iconId:"css"},
-    {iconId:"js"},
-    {iconId:"react"},
-    {iconId:"redux"},
-    {iconId:"bootstrap"},
-    {iconId:"tailwind"},
-    {iconId:"sass"},
-    {iconId:"git"},
-    {iconId:"greensock"},
-    {iconId:"vscode"},
-    {iconId:"githubSkill"},
+const skillData = [
+    {iconId: "html"},
+    {iconId: "css"},
+    {iconId: "js"},
+    {iconId: "react"},
+    {iconId: "redux"},
+    {iconId: "bootstrap"},
+    {iconId: "tailwind"},
+    {iconId: "sass"},
+    {iconId: "git"},
+    {iconId: "greensock"},
+    {iconId: "vscode"},
+    {iconId: "githubSkill"},
 
 ]
 
 
-
-export const Skills:React.FC = () => {
+export const Skills: React.FC = () => {
     return (
         <StyleSkills>
+            <ScrollToTop/>
             <Container>
                 <Title marginBottom={"140px"} mainTitle={"My Tech Stack"}
                        subTitle={" Technologies I’ve been working with recently"}/>
                 <FlexWrapper justify={"center"}
                              align={"center"}
                              wrap={"wrap"}>
-                    {skillData.map(skill=>{
-                        return(
+                    {skillData.map(skill => {
+                        return (
                             <Icon iconId={skill.iconId} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
                         )
                     })}
@@ -57,10 +59,14 @@ export const Skills:React.FC = () => {
 };
 
 const StyleSkills = styled.section`
-    padding: ${adaptiveFont(50,25)} 0;
-    ${FlexWrapper}{
+    position: relative;
+    z-index: 20;
+    background-color: ${them.color.mainBG};
+    padding: ${adaptiveFont(50, 25)} 0;
+
+    ${FlexWrapper} {
         column-gap: 95px;
         row-gap: 55px;
-        
+
     }
-    `
+`
