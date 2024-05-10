@@ -52,6 +52,7 @@
     "react-icons": "^5.1.0",
     "react-refresh": "0.11.0",
     "react-router-dom": "^6.23.0",
+    "react-scroll": "^1.9.0",
     "react-tsparticles": "^2.12.2",
     "resolve": "1.20.0",
     "resolve-url-loader": "4.0.0",
@@ -98,6 +99,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.10",
     "@types/styled-components": "5.1.26",
     "babel-plugin-styled-components": "2.0.7"
   },

@@ -1,7 +1,8 @@
 import React from 'react';
 import Icon from "../icon/Icon";
 import styled from "styled-components";
-
+import {Link, NavLink} from "react-router-dom";
+import {animateScroll as scroll} from "react-scroll";
 type LogoPropsType = {
     viewBox?: string
     iconId?: string
@@ -11,7 +12,7 @@ type LogoPropsType = {
 
 export const Logo = (props: LogoPropsType) => {
     return (
-        <StyledIconLink href="">
+        <StyledIconLink onClick={()=>{scroll.scrollToTop()}} to="">
             <Icon viewBox={props.viewBox}
                   iconId="logoGrey"
                   width={props.width}
@@ -21,7 +22,7 @@ export const Logo = (props: LogoPropsType) => {
 };
 
 
-const StyledIconLink = styled.a`
+const StyledIconLink = styled(NavLink)`
 display: flex;
     position: relative;
     z-index: 333;
