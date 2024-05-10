@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dell/static/css/main.e090315e.css",
-    "main.js": "/dell/static/js/main.4c919974.js",
+    "main.js": "/dell/static/js/main.a0b446f0.js",
     "static/js/787.25eaef86.chunk.js": "/dell/static/js/787.25eaef86.chunk.js",
     "static/media/foto.png": "/dell/static/media/foto.109c3e34f09d761b779b.png",
     "static/media/foto.webp": "/dell/static/media/foto.8935e6f2e093202387aa.webp",
@@ -16,11 +16,11 @@
     "static/media/Tvintos.webp": "/dell/static/media/Tvintos.20310fc6cba7306d5d99.webp",
     "index.html": "/dell/index.html",
     "main.e090315e.css.map": "/dell/static/css/main.e090315e.css.map",
-    "main.4c919974.js.map": "/dell/static/js/main.4c919974.js.map",
+    "main.a0b446f0.js.map": "/dell/static/js/main.a0b446f0.js.map",
     "787.25eaef86.chunk.js.map": "/dell/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e090315e.css",
-    "static/js/main.4c919974.js"
+    "static/js/main.a0b446f0.js"
   ]
 }
