@@ -105,7 +105,7 @@ export const Projects: React.FC = () => {
 
     return (
         <S.Project>
-
+            <ScrollToTop/>
             <Container>
                 <Title marginBottom={"115px"} mainTitle="Projects" subTitle={'Things I’ve built so far'}/>
                 <TabMenu
