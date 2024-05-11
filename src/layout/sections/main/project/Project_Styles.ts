@@ -105,16 +105,19 @@ const ProjectTitle = styled.h4`
 const ProjectText = styled.div`
     font-weight: 300;
     font-size: 18px;
-
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+
 
     p {
         margin-bottom: 10px;
         flex: 1 0 auto;
         max-height: 200px;
         overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
     }
 
     span {

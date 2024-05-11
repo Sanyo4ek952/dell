@@ -14,6 +14,7 @@ import {S} from "./Project_Styles"
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {TabMenu, TabsStatusType} from "../../../../components/tab-menu/TabMenu";
 import {ScrollToTop} from "../../../../components/ScrollToTop";
+import {AnimatePresence, motion } from "framer-motion"
 
 const tabsItems: Array<{ title: string, status: "all" | "React" | "Landing page" | "Spa" }> = [
     {title: "All", status: "all"},
@@ -22,8 +23,8 @@ const tabsItems: Array<{ title: string, status: "all" | "React" | "Landing page"
     {title: "Spa", status: "Spa"},
 ]
 
-
 const projects = [
+
     {
         srcImage: ELEAN,
         srcImageWebp: ELEANWebp,
@@ -32,7 +33,8 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS",
         text: "Сегодня ELEAN - это первый в России магазин готового женского смокинга. У нас каждая женщина может подобрать для себя образ со смокингом, такой же как у голливудских див и звезд светской хроники.  Костюм со смокингом ELEAN - выбор звёзд эстрады и кино, телеведущих, fashion-стилистов, успешных женщин-руководителей, представительниц научной и деловой элиты. История бренда началась задолго до первого показа, который состоялся 12 марта 2016 года, с мечты автора коллекции, Елены Писаревой о собственном бренде элегантной одежды и продолжалась долгие 30 лет накопления профессионального опыта. Вся первая коллекция была выполнена из 100% натурального шелка, в нее вошли жентсвенные платья и костюмы.",
-        type: "Spa"
+        type: "Spa",
+        id:1
     },
     {
         srcImage: marcetMils,
@@ -42,7 +44,8 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS",
         text: "Мощная функциональная платформа для любых интернет-проектов, бесплатное обучение специалистов, активное сообщество разработчиков и менеджеров. Миссия нашей компании заключается в создании современной и востребованной продукции для наших заказчиков.",
-        type: "React"
+        type: "React",
+        id:2
     },
     {
         srcImage: Tvintos,
@@ -52,7 +55,8 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS",
         text: "Интернет магазин АО СИЗ ТВИНТОС",
-        type: "Landing page"
+        type: "Landing page",
+        id:3
     },
     {
         srcImage: image2,
@@ -62,7 +66,8 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS, React",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "Landing page"
+        type: "Landing page",
+        id:4
     },
     {
         srcImage: image2,
@@ -72,7 +77,8 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS, React",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "React"
+        type: "React",
+        id:5
     },
     {
         srcImage: image2,
@@ -82,10 +88,12 @@ const projects = [
         subtext: "Tech stack :",
         techStack: "HTML , JavaScript, SASS, React",
         text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-        type: "spa"
+        type: "spa",
+        id:6
     }
 
 ]
+
 export const Projects: React.FC = () => {
     const [currentFilterStatus, setCurrentFilterStatus] = useState("all")
     let filteredWorks = projects
@@ -112,8 +120,16 @@ export const Projects: React.FC = () => {
                     currentFilterStatus={currentFilterStatus} changeFilterStatus={changeFilterStatus}
                     tabsItems={tabsItems}/>
                 <FlexWrapper justify={"space-around"}>
+                    <AnimatePresence>
                     {filteredWorks.map((project) => {
                             return (
+                                <motion.div style={{flex: "1 1 375px", display:"flex", justifyContent:"center"}}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    layout
+                                    key={project.id}
+                                >
                                 <Project
                                     srcProject={project.srcProject}
                                     image={project.srcImage}
@@ -121,11 +137,15 @@ export const Projects: React.FC = () => {
                                     title={project.title}
                                     subtext={project.subtext}
                                     techStack={project.techStack}
-                                    text={project.text}/>
+                                    text={project.text}
+                                    key={project.id}
+                                />
+                                </motion.div>
                             )
                         }
                     )
                     }
+                        </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </S.Project>

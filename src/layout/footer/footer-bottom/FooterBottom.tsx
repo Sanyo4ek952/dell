@@ -1,8 +1,6 @@
 import React from 'react';
-import {DesktopMenu} from "../../header/header-menu/desktop-menu/DesktopMenu";
 import {S} from "../Footer_Styles";
 import {GradientLink} from "../../../styles/GradientLink";
-import {menuItems} from "../../header/Header";
 
 export const FooterBottom:React.FC = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from "../icon/Icon";
 import styled from "styled-components";
-import {Link, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import {animateScroll as scroll} from "react-scroll";
 type LogoPropsType = {
     viewBox?: string
