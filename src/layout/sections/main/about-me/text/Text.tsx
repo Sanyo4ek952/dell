@@ -32,7 +32,7 @@ const StyledText = styled.div`
         color: transparent;
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 624px) {
         text-align: center;
 
     }

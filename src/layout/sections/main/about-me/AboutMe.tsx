@@ -32,10 +32,10 @@ const StyledAboutMe = styled.section`
     ${FlexWrapper} {
         height: 100vh;
         gap: 30px;
-        @media (max-width: 620px) {
+        @media (max-width: 624px) {
             flex-direction: column-reverse;
             align-items: center;
-
+            height: 100%;
         }
     }
 
