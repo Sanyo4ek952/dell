@@ -30,6 +30,7 @@ export default AboutMe;
 const StyledAboutMe = styled.section`
 
     ${FlexWrapper} {
+        height: 100vh;
         gap: 30px;
         @media (max-width: 620px) {
             flex-direction: column-reverse;
