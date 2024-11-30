@@ -9,7 +9,6 @@ const Email = styled.div`
     font-size: 58px;
     line-height: 70px;
     letter-spacing: -1px;
-
     p {
         color: rgb(204, 204, 204);
     }

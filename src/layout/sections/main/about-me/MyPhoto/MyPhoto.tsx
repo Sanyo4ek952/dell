@@ -56,7 +56,6 @@ const StylesMyPhoto = styled.div<StylesMyPhotoTypeProps>`
             height: 270px;
         }
     }
-
     img {
         position: absolute;
         top: 50%;

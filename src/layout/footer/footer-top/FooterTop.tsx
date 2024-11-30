@@ -18,11 +18,11 @@ export const FooterTop: React.FC = () => {
                 <S.Contacts>
                     <div>
                         <BsFillTelephoneFill/>
-                        <a href="tel:+911234509876">+911234509876</a>
+                        <a href="tel:+79787242604">+79787242604</a>
                     </div>
                     <div>
                         <MdEmail/>
-                        <a href="mailto:info@example.com">info@example.com</a>
+                        <a href="mailto:sanyo4ek952@gmail.com">sanyo4ek952@gmail.com</a>
                     </div>
                 </S.Contacts>
                 <SocialList socialLinks={socialLinks}/>
